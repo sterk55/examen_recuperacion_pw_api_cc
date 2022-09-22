@@ -1,5 +1,7 @@
 package com.example.service;
 
+import java.util.List;
+
 import javax.persistence.PersistenceContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,15 @@ public class ProductoServiceImpl implements IProductoService{
 		// TODO Auto-generated method stub
 		this.productoRepositoryImpl.crear(producto);
 		
+	}
+
+	@Override
+	public List<Producto> findAll() {
+
+		List<Producto> aux = this.productoRepositoryImpl.findAll();
+
+		return aux;
+	
 	}
 
 }

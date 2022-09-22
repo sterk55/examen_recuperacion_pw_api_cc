@@ -27,9 +27,21 @@ public class Producto implements Serializable{
 	@Column(name = "pro_stock")
 	private Integer stock;
 
+	@Column(name = "pro_categoria")
+	private String categoria;
+	 
 	
 	
-	
+
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
 	public Integer getStock() {
 		return stock;
 	}
